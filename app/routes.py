@@ -16,6 +16,7 @@ def signup():
         phone = form.phone.data
         address = form.address.data
         print(first_name, last_name, phone, address)
+
         flash(f"Thank you {first_name} for signing up!", "success")
         return redirect(url_for('index'))
     return render_template('signup.html', form=form)
